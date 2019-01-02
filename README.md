@@ -11,4 +11,4 @@ Mediasen.py - This program calculates harmonic, arithmetic, geometric mean, or w
 
 gradeprobab.py - This program calculates the likelihood of randomly getting x questions right in an exam of y questions of z items each.
 
-DetectorDeCopia.py - This program aims to estimate the likelihood of a set of texts being plagiarized from another given text. It needs the proper weights of its logistic factors in the 'calcula_assinatura(texto)' [calculate_signature(text)] functions. Once translated to english, it will have more features to make it more accurate.
+PlagiarismDetector.py - This program aims to estimate the likelihood of a set of texts being plagiarized from another given text. It needs the proper weights of its logistic factors in the 'calcula_assinatura(texto)' [calculate_signature(text)] functions. Now that it is translated to english, it will have more features to make it more accurate.
