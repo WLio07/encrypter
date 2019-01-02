@@ -5,7 +5,7 @@ encrypter3_2en.py - This program takes an one-paragraph string and converts it  
 
 threedotscartesianplaneen.py - This program takes the cooordinates of three dots in a cartesian plane and calculates the properties of the geometric figure that was formed.
 
-NumberGuesser.py - This program is game which will take the chosen min and max of a range and select a random number from it, you have an unlimited amount of tries.
+NumberGuesser.py - This program is a game which will take the chosen min and max of a range and select a random number from it, you have an unlimited amount of tries.
 
 Mediasen.py - This program calculates harmonic, arithmetic, geometric mean, or weighted average.
 
