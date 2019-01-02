@@ -1,37 +1,37 @@
-import re
-import math
+import re, math
 from math import e
 from collections import Counter
 
-l_prep = ('a', 'ante', 'até', 'após', 'de', 'desde', 'em', 'entre', 'com', 'contra', 'para', 'por', 'perante', 'sem', 'sobre', 'sob', 'como', 'no', 'nos', 'na', 'nas', 'num', 'numas', 'nuns', 'numa', 'ao', 'à', 'do', 'da', 'dos', 'das', 'pra', 'pro', 'pelo', 'pelos', 'pela', 'pelas')
-l_art = ('a', 'o', 'as', 'os', 'um', 'uma', 'uns', 'umas')
-l_num = ('um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'catorze', 'quinze', 'dezesseis', 'dezesete', 'dezoito', 'dezenove', 'vinte', 'trinta', 'quarenta', 'cinquenta', 'sessenta', 'setenta', 'oitenta', 'noventa', 'cem', 'duzentos', 'trezentos', 'quatrocentos', 'quinhentos', 'seiscentos', 'setecentos', 'oitocentos', 'novecentos', 'mil', 'milhão', 'bilhão', 'bilião', 'trilhão', 'trilião', 'quadrilhão', 'quatrilhão', 'quintilhão')
+l_prep = ('above', 'across', 'after', 'at', 'around', 'before', 'behind', 'below', 'beside', 'between', 'by', 'down', 'during', 'for', 'from', 'in', 'inside', 'onto', 'of', 'off', 'on, out', 'through', 'to', 'under', 'up', 'with')
+l_art = ('the', 'a', 'an', 'some')
+l_num = ('one') #...
 
 def all_textos(w):
-	#Esta função recebe todos os textos.
+	#This function receives all texts.
 	x = 1
 	while x<=w:
 		print()
-		h = input("Cole ou digite o {}º texto, sem aspas de citação: " .format(x))
+		h = input("Paste or type down the {} text, without quotation marks: " .format(x))
 		x += 1
 		li_t.append(h)
 	return li_t
 
 def conv_exp(nabsc, fata, expnumerador, expdenominador): 
-	#Esta função converte um número a seu correspondente em uma função exponencial | padrão (nabsc, 5, 1, 3)
+	#This function converts a numbers to its match in an exponential function | pattern (nabsc, 5, 1, 3)
 	if type(nabsc) != str:
 		y = fata/(nabsc**(expnumerador/expdenominador))
 		return (y)
 	pass
 
-def conv_logis_escal(x, valea, cristak, taxadcresb, q, proxmaxgrowv): #converte para função logística e estabalece a escala de 0 a 10
+def conv_logis_escal(x, valea, cristak, taxadcresb, q, proxmaxgrowv): 
+ #This function converts a numbers to its match in a logistical function e establishes a range from 0 to 10.
 	if type(x) != str:
 		y = (valea + (cristak - valea))/((1 + (q*math.e)**(-taxadcresb*x))**(1/proxmaxgrowv))
 		val = 10*(y - valea)/(cristak - valea)
 		return val
 	pass
 def lispala(texto):
-	#Esta função cria uma lista de palavras dado o texto.
+	#This function creates a list of words from a given text.
 	lista = []
 	for i in separa_sentencas(texto):
 		for u in separa_frases(i):
@@ -40,22 +40,22 @@ def lispala(texto):
 	return lista
 	
 def separa_sentencas(texto):
-    #Esta função recebe um texto e devolve uma lista das sentenças dentro do texto.
+    #This function receives a text and outputs a list of periods inside the text.
     sentencas = re.split(r'[.!?]+', texto)
     if sentencas[-1] == '':
         del sentencas[-1]
     return sentencas
 
 def separa_frases(sentenca):
-    #Esta função recebe uma sentença e devolve uma lista das frases dentro da sentença.
+    #This function receives a period and outputs a list of subphrases inside the period.
     return re.split(r'[,:;—]+', sentenca)
 
 def separa_palavras(frase):
-    #Esta função recebe uma frase e devolve uma lista das palavras dentro da frase.
+    #This function receives a subphrase and outputs a list of words inside this subphrase.
     return frase.split()
 
 def adv_repet(listapalavradiferente):
-	#Esta função cria uma lista dos advérbios cujos adjetivos correspondentes já estão no texto
+	#This function creates a list of adverbs whose corresponding adjectives are already in the text.
 	adv_repet = []
 	for i in listapalavradiferente:
 		for u in listapalavradiferente:
@@ -66,7 +66,7 @@ def adv_repet(listapalavradiferente):
 	return adv_repet
 
 def n_substv(lispala):
-	#Esta função determina o número de substantivos formados a partir de verbo em uma lista de palavras por intermédio do usuário
+	#This function determines the number of nouns formed from a verb in a list of words.
 	n_substv = 0
 	for i in lispala:
 		if (("ção" in i) or ("ções" in i)) and len(i)>6:
@@ -79,7 +79,7 @@ def n_substv(lispala):
 	return n_substv
 
 def n_adv(lispala):
-	#Esta função determina o número de substantivos formados a partir de verbo em uma lista de palavras por intermédio da interação do usuário
+	#This function determines the number of adverbs formed from an adjective in a list of words.
 	n_adv = 0
 	for i in lispala:
 		if "mente" in i and len(i)>6:
@@ -92,7 +92,7 @@ def n_adv(lispala):
 	return n_adv
 
 def l_palavras_unicas(lista_palavras):
-	#Esta função recebe uma lista de palavras e devolve a lista de palavras que aparecem uma única vez.
+	#This function receives a list of words and outputs a list of words whch show up only once.
 	palaunic = lista_palavras[:]
 	j = 0
 	for p in palaunic:
@@ -106,7 +106,7 @@ def l_palavras_unicas(lista_palavras):
 	return palaunic
 
 def l_palavras_diferentes(lista_palavras):
-	#Esta função define a lista de palavras usadas em um texto dada uma lista de palavras dele.
+	#This function defines a list of distinct words used in a text given its list of words.
 	paladif = []
 	for palavra in lista_palavras:
 		p = palavra.lower()
@@ -114,107 +114,67 @@ def l_palavras_diferentes(lista_palavras):
 			paladif.append(p)
 	return paladif
 	
-def ts_palavras_distintas(t_or, tc): #to = texto original | tc = texto a ser comparado
-	#Esta função cria um conjunto com as palavras dos dois textos e determina quantas palavras do texto comparada não estão no texto original.
+def ts_palavras_distintas(t_or, tc): #to = original text | tc = text to be compared
+	#This function creates a set with words of two texts and determines how many words in the compared text are not in the original text.
 	lipa_to = lispala(t_or)
 	lipa_tc = lispala(tc)
 	conpad_to = set(l_palavras_diferentes(lipa_to))
 	conpad_tc = set(l_palavras_diferentes(lipa_tc))
 	palaig = conpad_to.intersection(conpad_tc)
-	tspd = (len(conpad_tc) - len(palaig))/(len(conpad_tc))	#dividido por len(conpad_tc) para manter valor razoável
+	tspd = (len(conpad_tc) - len(palaig))/(len(conpad_tc))	#divided by len(conpad_tc) to keep a reasonable value.
 	return tspd
-
-def conv_r(val, limli, limls): #conversor de valor absoluto para razão utilizando valor absoluto e limites logísticos
-	pass
 	
 def compara_assinaturas(ato, as_c):
+	#Compares the texts' signatures.
 	somatorio = 0
 	for i in (range(0, 7)):
 		somatorio += abs(ato[i] - as_c[i])
 	return abs(somatorio)
 
-def compara_textos(t_o, tc): #assinatura comparada + funções que comparam texto
+def compara_textos(t_o, tc): #compared signature + functions that compare both texts
 	pass
 	
 def calcula_assinatura(texto):
+	#Calculates the linguistical signature of a text.
 	if texto[:-1] != ('.', '?', '!'): 
 		texto = texto + '.'
-	lispala0 = [] #primeira lista de palavras
-	ndc = 0 #número de caracteres
-	ntp = 0 #número total de palavras
+	lispala0 = [] #First list of words
+	ndc = 0 #Number of characters
+	ntp = 0 #Total number of words
 	lispala0 = lispala(texto)[:]
 	lispaladif = l_palavras_diferentes(lispala0)
 	ntp = len(lispala0)
 	for i in lispala0:
 		ndc += len(i)
-	ndc_cp = ndc + (ntp - 1) + len(separa_frases(texto)) + len(separa_sentencas(texto)) #número total de caracteres com pontuação | respectivamente numero total de caracteres em palavras, espaços, vírgulas e ponto-e-vírgulas, e pontos
+	ndc_cp = ndc + (ntp - 1) + len(separa_frases(texto)) + len(separa_sentencas(texto)) #Number of characters, with punctutation (=) Total number of characters in all words (+) Total number of words [- 1] (+) Total number of commas, colons, semicolons, and en dashes (+) Total number of dots.
 	
-	# [0] - Tamanho médio de palavra (tmp) é a soma dos tamanhos das palavras dividida pelo número total de palavras.
+	# [0] - Average word size is the sum of the lenghts of words divided by the number of words.
 	tmp = ndc/ntp
 
-	# [1] - Relação Type-Token (rtt) é o número de palavras diferentes dividido pelo número total de palavras.
+	# [1] - Type-Token Ratio (rtt) is the number of distinct words divided by the total number of words.
 	rtt = (len(lispaladif))/(len(lispala0))
 
-	# [2] - Razão Hapax Legomana (rhl) é o número de palavras que aparecem uma única vez dividido pelo total de palavras.
+	# [2] - Hapax Legomana Ratio (rhl) is the number of words that show up only once divided by the total number of words.
 	rhl = (len(l_palavras_unicas(lispala0)))/(len(lispala0))
 
-	# [3] - Tamanho médio de sentença (tms) é a soma dos números de caracteres em todas as sentenças dividida pelo número de sentenças (os caracteres que separam uma sentença da outra não devem ser contabilizados como parte da sentença).
+	# [3] - Average period size (tms) is the sum of the number of characters in all periods divided by the number of period (the characters that set apart one period from the other are not be counted as part of the period).
 	tms = (ndc + len(separa_frases(texto)) + (ntp - 1) - 1)/(len(separa_sentencas(texto)))
 
-	# [4] - Complexidade de sentença (cs) é o número total de frases divido pelo número de sentenças.
-	nf = 0 #número de frases
+	# [4] - Period complexity (cs) is the total number of subphrases divided by the number of periods.
+	nf = 0 #number of subphrases
 	for i in separa_sentencas(texto):
 		for u in separa_frases(i):
 			nf += 1
 	cs = nf/(len(separa_sentencas(texto)))
 	w1 = math.fsum((len(separa_frases(i)))**2 for i in separa_sentencas(texto))
 	
-	# [5] - Tamanho médio de frase (tmf) é a soma do número de caracteres em cada frase dividida pelo número de frases no texto (os caracteres que separam uma frase da outra não devem ser contabilizados como parte da frase).
+	# [5] - Tamanho médio de frase (tmf) is the sum of the number of characters in each subphrase divided by the number of subphrases in the text (the characters that set apart one subperiod from the other are not be counted as part of the subphrase).
 	tmf = (ndc + (ntp - 1))/nf
 	
-	# [6] - Variedade Vocabular (vv) é o número de palavras diferentes utilizadas exclusive preposições, artigos, e numerais dividido pelo número de palavras.
+	# [6] - Lexical Variety (vv) is the number of distinct words (except prepositions, articles, and numerals) divided by the number of words.
 	vva = set(lispaladif) - set(l_art + l_num + l_prep) - set(adv_repet(lispaladif))
-	vv = len(vva)/len(lispala0) #peso menor, um texto plagiado teria variedades lexicais similares, embora diferentes pois o disfarce entre os dois textos produziria redudância ou eliminação dela
+	vv = len(vva)/len(lispala0) #lower weight, a plagiarized text would have similar lexical varieties, albeit different as the concealment between the two texts would produce redudancy or lack thereof.
 
 	return [tmp, rtt, rhl, tms, cs, tmf, vv]
 
-#NÃO MEXER APÓS AQUI, TERMINAR TODAS AS FUNÇÕES, INTERPRETAR O QUE ESCREVI E FAZER AS ALTERAÇÕES ADEQUADAS
-##NÃO CRIAR NENHUMA VARIÁVEL DENOMINADA 'e'.
-
-print("Bem-vindo ao detector automático de COH-PIAH.")
-print()
-print("Este programa recebe um texto original e o compara com outros para identificar qual destes é mais provável de ser produto de cópia daquele.")
-print()
-t_or = input("Insira o texto original sem aspas de citação: ")
-print()
-q = int(input("Quantos textos com suspeita de cópia deseja analisar? "))
-li_t = [] #lista de textos
-l_asst = [] #lista de assinaturas dos textos | lista de listas
-l_assc = [] #lista de assinaturas comparadas
-
-all_textos(q)
-
-t_or2as = calcula_assinatura(t_or) #assinatura do texto original
-
-for i in li_t:
-	x = calcula_assinatura(i)
-	l_asst.append(x)
-	
-for i in l_asst:
-	j = compara_assinaturas(t_or2as, i)
-	l_assc.append(j)	#[0] comparação do texto 1, [1] do texto 2 e assim sucessivamente
-
-print()	
-a = 1
-	
-for i in l_assc:
-	if i>0.1:	
-		print("O {}º texto tem diferença de: {}" .format(a, i))
-		a += 1
-	else:
-		print("O {}º texto tem diferença de: 0" .format(a, i))
-		a += 1
-	
-print()
-
-input("Pressione a tecla ENTER para sair do programa.")
+input("Press ENTER to exit the program.")
