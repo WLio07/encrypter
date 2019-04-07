@@ -24,7 +24,7 @@ def conv_exp(nabsc, fata, expnumerador, expdenominador):
 	pass
 
 def conv_logis_escal(x, valea, cristak, taxadcresb, q, proxmaxgrowv): 
- #This function converts a numbers to its match in a logistical function e establishes a range from 0 to 10.
+ #This function converts a numbers to its match in a logistical function and establishes a range from 0 to 10.
 	if type(x) != str:
 		y = (valea + (cristak - valea))/((1 + (q*math.e)**(-taxadcresb*x))**(1/proxmaxgrowv))
 		val = 10*(y - valea)/(cristak - valea)
@@ -40,14 +40,14 @@ def lispala(texto):
 	return lista
 	
 def separa_sentencas(texto):
-    #This function receives a text and outputs a list of periods inside the text.
+    #This function receives a text and outputs a list of phrases inside the text.
     sentencas = re.split(r'[.!?]+', texto)
     if sentencas[-1] == '':
         del sentencas[-1]
     return sentencas
 
 def separa_frases(sentenca):
-    #This function receives a period and outputs a list of subphrases inside the period.
+    #This function receives a phrase and outputs a list of subphrases inside the phrase.
     return re.split(r'[,:;—]+', sentenca)
 
 def separa_palavras(frase):
