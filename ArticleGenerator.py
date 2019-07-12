@@ -74,50 +74,20 @@ def check_airing(line):
 def scraper(ob):
     el = re.split(' ', ob)
 
-#mangadex
-scraper
+    #mangadex scraper
+    manga_dex = 
 
+    #mangakakalot scraper
+    manga_kakalot = r'https://mangakakalot.com/manga/' + ('_'.join(i for i in el))
 
-
-ÃÂ ÃÂ ÃÂ  manga_dex = 
-
-
-
-ÃÂ ÃÂ ÃÂ ÃÂ #mangakakalot
-scraper
-
-
-
-ÃÂ ÃÂ ÃÂ  manga_kakalot = r'https://mangakakalot.com/manga/' + ('_'.join(i for i in el))
-
-
-
-ÃÂ ÃÂ ÃÂ  #wikipedia
-scraper
-
-
-
-ÃÂ ÃÂ ÃÂ  wiki_pedia = r'https://en.wikipedia.org/wiki/' + ('_'.join(i for i in el))
-
-
-
-ÃÂ 
-
-
+    #wikipedia scraper
+    wiki_pedia = r'https://en.wikipedia.org/wiki/' + ('_'.join(i for i in el))
 
 def conditional_clause_builder(ver1, ver2, tocheck): #ver1 is tuple 'verbs' and ver2
 'indicative_or_airing' and tocheck is always re.split(' ', ' '.join(i for i in
 [*lista de dados em que pode haver indicativo de airing*]))
 
-
-
-ÃÂ ÃÂ ÃÂ  conjunctions = ('as ' + ('has ' + (ver1+ver2)[random.randint(0,len(ver1+ven2))] if check_airing(tocheck) elseÃÂ  ver1[random.randint(0,len(ver1))], 'with the ', '')
-
-
-
-ÃÂ 
-
-
+    conjunctions = ('as ' + ('has ' + (ver1+ver2)[random.randint(0,len(ver1+ven2))] if check_airing(tocheck) elseÃÂ  ver1[random.randint(0,len(ver1))], 'with the ', '')
 
 #ideas:
 
