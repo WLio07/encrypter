@@ -18,25 +18,18 @@ was the announcement made (aa-mm-dd)? ")
 
 mult_confirm = input("Are there multiple items? 1 for yes | 2 for no: ")
 
-print("What
-is the type of midia the objects pertains to (manga, movie, novel, light novel,
-anime)? ")
+print("What is the type of midia the objects pertains to (manga, movie, novel, light novel, anime)? ")
 
 obj3 =
 sys.stdin.readlines() #many in case it's needed
 
-print("Did
-anything in context happened before the news (the airing of a final episode
-before the announcement of a new season etc)? ")
+print("Did anything in context happened before the news (the airing of a final episode before the announcement of a new season etc)? ")
 beforewards1 = sys.stdin.readlines()
 
-print("Did
-anything in context happened after the news (the schedulement of an event after
-the announcement of a new season etc)? ")
+print("Did anything in context happened after the news (the schedulement of an event after the announcement of a new season etc)? ")
 afterwards1 = sys.stdin.readlines()
 
-src1 = input("Who
-made the announcement? ")
+src1 = input("Who made the announcement? ")
 
 adcj_temp = ('Recently','These days', 'Some days ago', 'In ' + months[datan[3:5]] + ' ' + datan[6:8] + 'st' if int(datan[7:8])==1 else 'nd' if int(datan[7:8])==2 else 'rd' if int(datan[7:8])==3 else 'th', 'Today' if datto=dattan)
 months = {'01': 'January', '02': 'February', '03': 'March', '04': 'April', '05': 'May', '06': 'June', '07': 'July', '08': 'August', '09': 'September', '10': 'October', '11': 'November', '12': 'December'}
