@@ -8,8 +8,7 @@ was the subject?
 1 - New anime announced
 2 - New LN/manga announced
 3 - Single title announcement
-4 - ?''') # 2-
-differentiation between license and new product is made in module_2_1
+4 - ?''') # 2- differentiation between license and new product is made in module_2_1
 
 
 
