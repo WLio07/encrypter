@@ -41,16 +41,7 @@ afterwards1 = sys.stdin.readlines()
 src1 = input("Who
 made the announcement? ")
 
-
-
-ÃÂ 
-
-
-
 adcj_temp = ('Recently','These days', 'Some days ago', 'In ' + months[datan[3:5]] + ' ' + datan[6:8] + 'st' if int(datan[7:8])==1 else 'nd' if int(datan[7:8])==2 else 'rd' if int(datan[7:8])==3 else 'th', 'Today' if datto=dattan)
-
-
-
 months = {'01': 'January', '02': 'February', '03': 'March', '04': 'April', '05': 'May', '06': 'June', '07': 'July', '08': 'August', '09': 'September', '10': 'October', '11': 'November', '12': 'December'}
 
 
