@@ -1,7 +1,8 @@
-import asyncio
-from pyppeteer import launch
 #this program takes a screenshot of google translator after opening the drop-down menu of languages, using two different methods
-async def main1(): #this method executes the program directly
+import asyncio #it uses the pyppeteer package
+from pyppeteer import launchasync #by rewriting the code, it can be repurposed to many different tasks, most commands are already here
+#as usually there is little needed beyond typing and clicking, omission of main1 (comment it out) in favour of main2 is adviced
+def main1(): #this method executes the program directly
     browser = await launch() #launches hidden browser
     page = await browser.newPage() #opens page (tab)
     await page.goto('https://translate.google.com/', timeout= 0) #timeout = 0 is to avoid Error: timeout
@@ -22,7 +23,7 @@ async def main2(a): #this program executes the program with exec() of a multi-li
     ) #I don't know how it solves the problem; it just works
     return await locals()['__ex']() #it is a safer approach, but a less straigthforward one
 
-c=r"""browser = await launch() #this is the string that will be execute by main2(a), a being the string as parameter
+c=r"""browser = await launch() #this is the string that will be executed by main2(a), 'a' being the string as parameter
 page = await browser.newPage()
 await page.goto('https://translate.google.com.br/?hl=pt-BR', timeout= 0)
 dimensions = await page.evaluate('''() => {
