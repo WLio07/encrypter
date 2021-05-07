@@ -8,16 +8,10 @@ Take multiline input: input1 = sys.stdin.readlines() #end input with ctrl+Z or c
 
 Module of a vector: abs(number)
 
-Transform a data type into another: str(int/float), float(int/str), int(float/str)
-
 Separates each word in a string: string1.split()
 
 Upper/Lowercase everything: string1.upper(), string1.lower()
 Capitalize first word in string: strin1.capitalize()
-
-Add to its own value: a += 1 #mesmo que a = a + 1 / vale para qualquer operação
-
-Last element of a list: lis1[-1]
 
 Print all elements of a list without commas and brackets: print(*list)
 
@@ -37,11 +31,11 @@ Iter through values of a dictionary: for key1, value1 in dict1.items()
 
 str() is made to be readable, repr() is made to represent data accurately, be it an int or str between quotation marks with line break or not, or classes with dots.
 
-Transform string into python code with other data types: eval(string1)
+Transform string into python code with other data types: eval(string1) 
 
 Execute string: exec(string1)
 
-Executar múltiplas funções simultaneamente:
+Execute many functions at the same type:
 from multiprocessing import Process
 def func1():
 	pass
