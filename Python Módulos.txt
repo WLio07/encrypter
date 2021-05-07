@@ -1,22 +1,28 @@
-MÛdulos:
+M√≥dulos:
 
-PARA INSTALAR M”DULOS EXTERNOS: py -m pip install ModuleName
+PARA INSTALAR M√ìDULOS EXTERNOS: py -m pip install ModuleName
 
-math: substitui expressıes e funÁıes por comandos simples para realizar operaÁıes matem·ticas simples ou complexas
+math: substitui express√µes e fun√ß√µes por comandos simples para realizar opera√ß√µes matem√°ticas simples ou complexas
 
-random: gera valores pseudo-aleatÛrios
+random: gera valores pseudo-aleat√≥rios
 
-ntlk: ferramenta para computaÁ„o linguÌstica; separa frases, sentenÁas e palavras; traz definiÁ„o morfolÛgica; etc
-Para baixar, fazer download pelo CMD no diretÛrio Python usando a pasta pip. 
-ntlk sem seus arquivos de dados È in˙til, ntlk.download() -> all 
+ntlk: ferramenta para computa√ß√£o lingu√≠stica; separa frases, senten√ßas e palavras; traz defini√ß√£o morfol√≥gica; etc
+Para baixar, fazer download pelo CMD no diret√≥rio Python usando a pasta pip. 
+ntlk sem seus arquivos de dados √© in√∫til, ntlk.download() -> all 
 
-re: uma express„o regular (RE) especifica um conjunto de strings que se adequa a ela e a manipula
+re: uma express√£o regular (RE) especifica um conjunto de strings que se adequa a ela e a manipula
 
 collections:
-(from collections import Counter) cria dicion·rio com a frequÍncia de elementos em uma lista
+(from collections import Counter) cria dicion√°rio com a frequ√™ncia de elementos em uma lista
 
 time: realiza tarefas relacionadas a tempo
 
 tkinter: criador de GUI
 
-os: manipula arquivos no computador do usu·rio
+os: manipula arquivos no computador do usu√°rio
+
+pyppeteer: manipula um navegador chromium
+
+webbrowser: abre um navegador em um s√≠tio
+
+brython: substitui javascript em p√°ginas html
