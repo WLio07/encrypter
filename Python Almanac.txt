@@ -1,0 +1,66 @@
+Python Almanac
+
+Format variables into string: print("Lorem ipsum {} dolor {}".format(first brackets, second brackets))
+or
+print("Lorem ipsum " + variable1 + " amet.")
+
+Take multiline input: input1 = sys.stdin.readlines() #end input with ctrl+Z or ctrl+D
+
+Module of a vector: abs(number)
+
+Transform a data type into another: str(int/float), float(int/str), int(float/str)
+
+Separates each word in a string: string1.split()
+
+Upper/Lowercase everything: string1.upper(), string1.lower()
+Capitalize first word in string: strin1.capitalize()
+
+Add to its own value: a += 1 #mesmo que a = a + 1 / vale para qualquer operação
+
+Last element of a list: lis1[-1]
+
+Print all elements of a list without commas and brackets: print(*list)
+
+Sort list [reverse]: list1.sort([reverse=True])
+
+Copy a list without making them interactive: list2 = list1[:]
+
+Intersection of two lists: set(list1).intersection(set(list2))
+
+Sum integers: sum(iterable of integers)
+
+Iter through more than two lists: for i, u in zip(list1, list2)
+
+Unite iterable (can be string) by character: "[character (can be space or empty)].join(itera1)
+
+Iter through values of a dictionary: for key1, value1 in dict1.items()
+
+str() is made to be readable, repr() is made to represent data accurately, be it an int or str between quotation marks with line break or not, or classes with dots.
+
+Transform string into python code with other data types: eval(string1)
+
+Execute string: exec(string1)
+
+Executar múltiplas funções simultaneamente:
+from multiprocessing import Process
+def func1():
+	pass
+def func2():
+	pass
+if __name__ == '__main__':
+	p1 = Process(target=func1)
+	p1.start()
+	p2 = Process(target=func2)
+	p2.start()
+	p1.join()
+	p2.join()
+#/*or*/
+def RunInParallel(*funs):
+	proc=[]
+	for fn in fns:
+		p=Process(target=fn)
+		p.start()
+		proc.append(p)
+	for p in proc:
+		p.join()
+RunInParallel(func1,func2)

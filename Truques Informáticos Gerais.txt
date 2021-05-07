@@ -1,0 +1,16 @@
+General Computer Science Trickes
+
+Get the coordinates of an HTML element:
+
+console[
+function offset(el) {
+    var rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+} //exactly as it is
+
+var vari1 = document.querySelector('tag/class/id/name'); //nome de variável que desejar
+var divOffset = offset(vari1);
+console.log(divOffset.left, divOffset.top);
+]

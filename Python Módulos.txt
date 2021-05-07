@@ -1,0 +1,22 @@
+Módulos:
+
+PARA INSTALAR MÓDULOS EXTERNOS: py -m pip install ModuleName
+
+math: substitui expressões e funções por comandos simples para realizar operações matemáticas simples ou complexas
+
+random: gera valores pseudo-aleatórios
+
+ntlk: ferramenta para computação linguística; separa frases, sentenças e palavras; traz definição morfológica; etc
+Para baixar, fazer download pelo CMD no diretório Python usando a pasta pip. 
+ntlk sem seus arquivos de dados é inútil, ntlk.download() -> all 
+
+re: uma expressão regular (RE) especifica um conjunto de strings que se adequa a ela e a manipula
+
+collections:
+(from collections import Counter) cria dicionário com a frequência de elementos em uma lista
+
+time: realiza tarefas relacionadas a tempo
+
+tkinter: criador de GUI
+
+os: manipula arquivos no computador do usuário
