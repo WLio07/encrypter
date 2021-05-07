@@ -1,5 +1,4 @@
 # Little-Projects
-Programs I have developed with my beginner Python knowledge. I have been programming for a while so something old such and simple such as NumberGuesser will obviously be nowhere near the complexity of something such as PrimevalBrowserManipulator; regardless, I still believe I am a beginner even though I have the basics and many packages down.
 
 encrypter3_2en.py - This program takes an one-paragraph string and converts it  into an unintelligible set of characters. Then, a program will be automatically generated in the Desktop that will have the array of keys to decrypt the code previously created.
 
